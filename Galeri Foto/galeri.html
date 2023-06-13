@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALERI FOTO</title>
+    <link rel="stylesheet" href="galeri.css">
+</head>
+<body>
+    <h1>Tokedpedia</h1>
+    <div class="container">
+        <a href="#gambar-1">
+            <img class= "item" id="1" onclick="overlay1()" src="gambar-1.jpg" alt="hp">
+            <span class="span">Handphone</span>
+        </a>
+        <a href="#gambar-2"><img class= "item" id="2" onclick="overlay2()" src="gambar-2.jpg" alt="kulkas">
+            <span class="span">Refrigerator</span>
+        </a>
+        <a href="#gambar-3"><img class= "item" id="3" onclick="overlay3()" src="gambar-3.jpg" alt="kamera">
+            <span class="span">Camera</span>
+        </a>
+        <a href="#gambar-4"><img class= "item" id="4" onclick="overlay4()" src="gambar-4.jpg" alt="speaker">
+            <span class="span">Speaker</span>
+        </a>
+        <a href="#gambar-5"><img class= "item" id="5" onclick="overlay5()" src="gambar-5.jpg" alt="earphone">
+            <span class="span">Earphone</span>
+        </a>
+    </div>
+    <div class="overlay" id="gambar-1">
+        <img src="gambar-1.jpg">
+        <a href="#" class="close">X</a>
+        <a href="#gambar-2" class="next"><img src="next.png"></a>
+    </div>
+    <div class="overlay" id="gambar-2">
+        <a href="#gambar-1" class="previous"><img src="previous.png"></a>
+        <img src="gambar-2.jpg">
+        <a href="#" class="close">X</a>
+        <a href="#gambar-3" class="next"><img src="next.png"></a>
+    </div>
+    <div class="overlay" id="gambar-3">
+        <a href="#gambar-2" class="previous"><img src="previous.png"></a>
+        <img src="gambar-3.jpg">
+        <a href="#" class="close">X</a>
+        <a href="#gambar-4" class="next"><img src="next.png"></a>
+    </div>
+    <div class="overlay" id="gambar-4">
+        <a href="#gambar-3" class="previous"><img src="previous.png"></a>
+        <img src="gambar-4.jpg">
+        <a href="#" class="close">X</a>
+        <a href="#gambar-5" class="next"><img src="next.png"></a>
+    </div>
+    <div class="overlay" id="gambar-5">
+        <a href="#gambar-4" class="previous"><img src="previous.png"></a>
+        <img src="gambar-5.jpg">
+        <a href="#" class="close">X</a>
+    </div>
+
+</body>
+</html>
