@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image:url('bg.jpg');
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* HEADER */
+.bg-header {
+    position: absolute;
+    top: 2.5%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 45%;
+    height: 10%;
+    border-radius: 14px;
+    box-shadow:  8px 8px 10px #815422, -8px -8px 10px #505e83;
+    z-index: -1;
+    background-color: rgba(225,225,225,0.25);
+}
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: 50px;
+    width: 45%;
+    font-weight: 900;
+    background-image: linear-gradient(180deg, rgba(131,58,180,1) 7%, rgba(240,210,35,1) 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 2px black;
+}
+
+
+/* MAIN */
+.bg-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 45%;
+    height: 62%;
+    background-color: rgba(225,225,225,0.25);
+    box-shadow: 0 25px 25px rgba(0,0,0,0.1);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    flex-wrap: wrap;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.item {
+    margin: 5px;
+}
+.awalan, .labelCelsius, .labelFahrenheit, .labelKalkulasi {
+    text-align: justify;
+    font-weight: bold;
+    color: #000;
+}
+.inputCelsius, .inputFahrenheit, .kalkulasi {
+    width: 500px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: solid 2px #000;
+    color: #000;
+    background-color: transparent;
+}
+main div .button {
+    flex-direction: row;
+    width: 500px;
+    height: 45px;
+    display: flex;
+    justify-content: flex-start;
+}
+.konversi, .reset, .reverse {
+    width: 75px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000;
+    border-radius: 8px;
+    margin-right: 20px;
+    transition: 0.3s;
+}
+
+.konversi {
+    color: #05fa77;
+    text-shadow: 0 0 4px #73f1ae;
+    border: solid 2px #05fa77;
+
+}
+.konversi:hover {
+    color: #000;
+    text-shadow: 0 0 0 #000;
+    background-color: #05fa77;
+    border: solid 2px #05fa77;
+    font-weight: bolder;
+    box-shadow: 0 0 10px rgba(5, 250, 119, 0.5), 0 0 40px rgba(5, 250, 119, 0.5), 0 0 80px rgba(5, 250, 119, 0.5);
+}
+
+.reset {
+    color: #d63333;
+    text-shadow: 0 0 4px #ff0000;
+    border: solid 2px #d63333;
+}
+.reset:hover {
+    color: #000;
+    text-shadow: 0 0 0 #000;
+    background-color: #d63333;
+    border: solid 2px #d63333;
+    font-weight: bolder;
+    box-shadow: 0 0 10px rgba(214, 51, 51, 0.5), 0 0 40px rgba(214, 51, 51, 0.5), 0 0 80px rgba(214, 51, 51, 0.5);
+}
+
+.reverse {
+    color: #398bee;
+    text-shadow: 0 0 4px #2661d6;
+    border: solid 2px #398bee;
+}
+.reverse:hover {
+    color: #000;
+    text-shadow: 0 0 0 #000;
+    background-color: #398bee;
+    border: solid 2px #398bee;
+    font-weight: bolder;
+    box-shadow: 0 0 10px rgba(57, 139, 238, 0.5), 0 0 40px rgba(57, 139, 238, 0.5), 0 0 80px rgba(57, 139, 238, 0.5);
+}
+
+.konversi:active, .reset:active, .reverse:active {
+    border: solid 2px #000;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+
+.inputCelsius:focus {
+    outline-color:  rgb(11, 245, 217);
+    box-shadow: 0 0 10px rgb(127, 255, 212);
+}
+
+a {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 15%;
+    height: 4.8%;
+    background-color: rgba(225,225,225,0.25);
+    box-shadow: 0 25px 25px rgba(0,0,0,0.1);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    text-decoration: none;
+    color: rgb(255, 255, 0);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #000;
+}
+.overlayExplanation {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 5;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlayExplanation:target {
+    width: auto;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .8);
+}
+.overlayExplanation .close {
+    position: absolute;
+    border: solid 1px;
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    width: 10%;
+    height: 4.6%;   
+}
+
+#explanation .ckef {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    left: 5%;
+    top: 20%;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 15px;
+}
+.judulX {
+    font-size: 28px;
+    text-align: center;
+}
+.isiX, .rumus1, .atau, .rumus2 {
+    font-size: 23px;
+    text-align: justify;
+}
+
+#explanation .fkec {
+    position: absolute;
+    width: 40%;
+    height: 50%;
+    right: 5%;
+    top: 20%;
+    background-color: white;
+    border: solid 2px black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+
+/* FOOTER */
+footer p {
+    position: absolute;
+    bottom: 13%;
+    left: 1.5%;
+    font-size: 15px;
+    color: #fff; 
+    font-style: italic;
+    font-weight: bold;  
+}
+footer p span {
+    color: yellow;
+    font-style: normal;
+}
+
+footer #footer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    border: solid 1px black;
+    border-radius: 50px;
+    bottom: 2%;
+    left: 1%;
+    width: 4.8%;
+    height: 10%;
+}
+#logo {
+    height: auto; 
+    width: auto; 
+    max-width: 60px; 
+    max-height: 60px;
+}
+
+footer #footer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3%;
+    left: 7%;
+    background-color: #fff;
+    border: solid 1px black;
+    border-radius: 10px;
+    height: 8%;
+    width: 10%;
+}
+#revou {
+    height: auto;
+    width: auto;
+    max-height: 57.2px;
+    max-width: 116.8px;
+    
+}
